@@ -33,18 +33,21 @@
 
 # DESAFIO 103 - Ficha do Jogador
 
-def ficha(nome='<desconhecido>', gols=0):
-    print(f'O jogador {nome} fez {gols} gol(s) no campeonato')
+# def ficha(nome='<desconhecido>', gols=0):
+#     print(f'O jogador {nome} fez {gols} gol(s) no campeonato')
 
-jogador = str(input('Nome do Jogador: '))
-gol = str(input('Número de Gols: '))
+# jogador = str(input('Nome do Jogador: '))
+# gol = str(input('Número de Gols: '))
 
-if gol.isnumeric():
-    gol = int(gol)
-else:
-    gol = 0
+# if gol.isnumeric():
+#     gol = int(gol)
+# else:
+#     gol = 0
 
-if jogador.strip() == '':
-    ficha(gols=gol)
-else:
-    ficha(jogador, gol)
+# if jogador.strip() == '':
+#     ficha(gols=gol)
+# else:
+#     ficha(jogador, gol)
+
+# DESAFIO 104 - Validando entrada de dados em Python
+
