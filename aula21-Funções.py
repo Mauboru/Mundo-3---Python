@@ -17,13 +17,16 @@
 
 # DESAFIO 102 - Função para Fatorial
 
-def fatorial(n, show=True):
-    if n == 0 or n == 1:
-        return 1
-    else:
+def fatorial(n, show=False):
+    f = 1
+    for c in range(n, 0, -1):
         if show:
-            print(f'{n} x', end=' ')
-        return n * fatorial(n-1)
-    
+            print(c, end='')
+            if c > 1:
+                print(' x ', end='')
+            else:
+                print(f' = ', end='')
+        f *= c
+    return f
 
-print(fatorial(5, show=False))
+print(fatorial(5, True))               
