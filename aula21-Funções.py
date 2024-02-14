@@ -51,20 +51,58 @@
 
 # DESAFIO 104 - Validando entrada de dados em Python
 
-def leiaInt(msg):
-    ok = False
-    valor = 0
+# def leiaInt(msg):
+#     ok = False
+#     valor = 0
 
-    while True:
-        n = str(input(msg))
-        if n.isnumeric():
-            valor = int(n)
-            ok = True
+#     while True:
+#         n = str(input(msg))
+#         if n.isnumeric():
+#             valor = int(n)
+#             ok = True
+#         else:
+#             print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
+#         if ok:
+#             break
+#     return valor
+
+# n = leiaInt("Digite um numero: ")
+# print(f'Você acabou de digitar o número {n}')
+
+# DESAFIO 105 - Analisando e gerando Dicionários
+
+def notas(*n, sit=False):
+    nota = list(n)
+    resposta = dict()
+    
+    #Pegando qtd de nota
+    resposta['total'] = len(nota)
+    
+    #Pegando maior nota
+    maior = 0
+    for i in nota:
+        if i > maior:
+            maior = i
+    resposta['maior'] = maior
+    
+    #Pegando menor nota
+    menor = float('inf')
+    for i in nota:
+        if i < menor:
+            menor = i
+    resposta['menor'] = menor
+    
+    #Pegando a media das notas
+    resposta['media'] = sum(nota) / len(nota)
+    
+    #Pegando a situação
+    if sit:
+        if resposta['media'] > 6:
+            resposta['situação'] = 'BOA!'
         else:
-            print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
-        if ok:
-            break
-    return valor
+            resposta['situação'] = 'RUIM!'
+    
+    return resposta
 
-n = leiaInt("Digite um numero: ")
-print(f'Você acabou de digitar o número {n}')
+resposta = notas(5.5, 2.5, 1.5, 9, sit=True)
+print(resposta)
