@@ -1,25 +1,25 @@
 # Aumentar a porcentagem em 10%
-def aumentar(n):
+def aumentar(n, format=False):
     porcentagem = (n * 10) / 100
     aumento = porcentagem + n
-    return aumento
+    return aumento if format is False else moedas(aumento)
 
 # Diminuir a porcentagem em 10%
-def diminuir(n):
+def diminuir(n, format=False):
     porcentagem = (n * 10) / 100
-    dimnuir = n - porcentagem
-    return dimnuir
+    diminuir = n - porcentagem
+    return diminuir if format is False else moedas(diminuir)
 
 # Dobro do valor
-def dobro(n):
+def dobro(n, format=False):
     valor = 2 * n
-    return valor
+    return valor if format is False else moedas(valor)
 
 # Metade do valor
-def metade(n):
+def metade(n, format=False):
     valor = n / 2
-    return valor
+    return valor if format is False else moedas(valor)
 
 # Formata os valores
-def moeda(preco=0, moeda='R$'):
+def moedas(preco=0, moeda='R$'):
     return f'{moeda}{preco:.2f}'.replace('.',',')
