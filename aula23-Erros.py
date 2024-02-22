@@ -26,20 +26,20 @@
 
 # DESAFIO 114 - Site está acessível?
 
-import requests
+# import requests
 
-def verifica_conexao_internet():
-    try:
-        response = requests.get("https://github.com/Mauboru")  
-        if response.status_code == 200:
-            return True
-        else:
-            return False      
+# def verifica_conexao_internet():
+#     try:
+#         response = requests.get("https://github.com/Mauboru")  
+#         if response.status_code == 200:
+#             return True
+#         else:
+#             return False      
         
-    except (requests.ConnectionError, requests.ConnectTimeout):
-        return False
+#     except (requests.ConnectionError, requests.ConnectTimeout):
+#         return False
 
-if verifica_conexao_internet():
-    print("O site Mauboru está com conexão com a Internet.")
-else:
-    print("Sem conexão com a Internet.")
+# if verifica_conexao_internet():
+#     print("O site Mauboru está com conexão com a Internet.")
+# else:
+#     print("Sem conexão com a Internet.")
